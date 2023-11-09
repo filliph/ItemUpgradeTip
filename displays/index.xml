@@ -1,0 +1,10 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <Include file="TabButton.xml" />
+    <Include file="Heading.xml" />
+    <Include file="SubHeading.xml" />
+    <Include file="Inset.xml" />
+
+    <Include file="UpgradeFrame.xml" />
+
+    <Include file="tabs/Info.xml" />
+</Ui>

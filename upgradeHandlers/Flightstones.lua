@@ -28,7 +28,7 @@ private.currencyIndexes[private.currencyIds.aspectDreamingCrest] = true
 private.Preferences.DefaultValues.profile.DisabledIntegrations.Flightstones = false;
 private.Preferences.DisabledIntegrations.Flightstones = {
     type = "toggle",
-    name = L["Flightstone / Crest Upgrades"],
+    name = L["FLIGHTSTONE_CREST_UPGRADES"],
     order = 110,
     width = "double",
 }
@@ -212,7 +212,7 @@ local itemExtendedCostLookup = {
 local flightstoneUpgradeData = {
     {
         id = "flightstones",
-        name = L["Flightstones"],
+        name = L["FLIGHTSTONES"],
         color = WHITE_FONT_COLOR,
         icon = 5172976,
         itemId = nil,
@@ -221,7 +221,7 @@ local flightstoneUpgradeData = {
 
     {
         id = "whelpCrests",
-        name = L["Whelpling's Crests"],
+        name = L["WHELP_CRESTS"],
         color = UNCOMMON_GREEN_COLOR,
         icon = 5309872,
         itemId = nil,
@@ -230,7 +230,7 @@ local flightstoneUpgradeData = {
 
     {
         id = "drakeCrests",
-        name = L["Drake's Crests"],
+        name = L["DRAKE_CRESTS"],
         color = RARE_BLUE_COLOR,
         icon = 5309870,
         itemId = nil,
@@ -239,7 +239,7 @@ local flightstoneUpgradeData = {
 
     {
         id = "wyrmCrests",
-        name = L["Wyrm's Crests"],
+        name = L["WYRM_CRESTS"],
         color = EPIC_PURPLE_COLOR,
         icon = 5309874,
         itemId = nil,
@@ -248,7 +248,7 @@ local flightstoneUpgradeData = {
 
     {
         id = "aspectCrests",
-        name = L["Aspect's Crests"],
+        name = L["ASPECT_CRESTS"],
         color = LEGENDARY_ORANGE_COLOR,
         icon = 5309868,
         itemId = nil,
@@ -504,12 +504,12 @@ local function HandleFlightstones(tooltip, itemExtendedCosts, bonusId, bonusInfo
 
         if #nextLevelLines > 0 or #totalLines > 0 then
             tooltip:AddLine("\n")
-            tooltip:AddLine(ARTIFACT_GOLD_COLOR:WrapTextInColorCode(L["Flightstone / Crest Upgrades"]))
+            tooltip:AddLine(ARTIFACT_GOLD_COLOR:WrapTextInColorCode(L["FLIGHTSTONE_CREST_UPGRADES"]))
 
             if nextLevelLines then
                 if not private.DB.profile.CompactTooltips then
                     -- Standard tooltip
-                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["Cost for next level:"] .. " (" .. nextUpgrade.itemLevel .. ")"))
+                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["COST_FOR_NEXT_LEVEL"] .. " (" .. nextUpgrade.itemLevel .. ")"))
 
                     for _, newLine in pairs(nextLevelLines) do
                         tooltip:AddDoubleLine(newLine.left, newLine.right)
@@ -517,7 +517,7 @@ local function HandleFlightstones(tooltip, itemExtendedCosts, bonusId, bonusInfo
                 else
                     -- Compact tooltips
                     tooltip:AddDoubleLine(
-                        WHITE_FONT_COLOR:WrapTextInColorCode(L["Next Upgrade (%d):"]:format(nextUpgrade.itemLevel)),
+                        WHITE_FONT_COLOR:WrapTextInColorCode(L["NEXT_UPGRADE_X"]:format(nextUpgrade.itemLevel)),
                         nextLevelLines[1].right
                     )
                 end
@@ -530,7 +530,7 @@ local function HandleFlightstones(tooltip, itemExtendedCosts, bonusId, bonusInfo
                         tooltip:AddLine("\n")
                     end
 
-                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["Cost to upgrade to max level:"] .. " (" .. maxUpgrade.itemLevel .. ")"))
+                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["COST_TO_UPGRADE_TO_MAX"] .. " (" .. maxUpgrade.itemLevel .. ")"))
 
                     for _, newLine in pairs(totalLines) do
                         tooltip:AddDoubleLine(newLine.left, newLine.right)
@@ -538,7 +538,7 @@ local function HandleFlightstones(tooltip, itemExtendedCosts, bonusId, bonusInfo
                 else
                     -- Compact tooltips
                     tooltip:AddDoubleLine(
-                        WHITE_FONT_COLOR:WrapTextInColorCode(L["Max Upgrade (%d):"]:format(maxUpgrade.itemLevel)),
+                        WHITE_FONT_COLOR:WrapTextInColorCode(L["MAX_UPGRADE_X"]:format(maxUpgrade.itemLevel)),
                         totalLines[1].right
                     )
                 end

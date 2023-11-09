@@ -8,11 +8,23 @@ local private = select(2, ...) ---@class PrivateNamespace
 local L = LibStub("AceLocale-3.0"):GetLocale(AddOnFolderName)
 
 ---@class ItemUpgradeTip: AceAddon, AceConsole-3.0, AceEvent-3.0
-local ItemUpgradeTip = LibStub("AceAddon-3.0"):NewAddon(AddOnFolderName, "AceConsole-3.0", "AceEvent-3.0")
+ItemUpgradeTip = LibStub("AceAddon-3.0"):NewAddon(AddOnFolderName, "AceConsole-3.0", "AceEvent-3.0")
+
+ItemUpgradeTip.Version = GetAddOnMetadata(AddOnFolderName, "Version");
+ItemUpgradeTip.L = L;
+
+-- Toggle the upgrade pane
+function ItemUpgradeTip:ToggleView()
+    if IUTView == nil then
+        CreateFrame("Frame", "IUTView", UIParent, "ItemUpgradeTipUpgradeTemplate")
+    end
+
+    ---@diagnostic disable-next-line: need-check-nil
+    IUTView:SetShown(not IUTView:IsShown())
+end
 
 -- Core initialisation
 function ItemUpgradeTip:OnInitialize()
-    private:InitializeFrame()
     local DB = private.Preferences:InitializeDatabase()
 
     private.DB = DB
@@ -29,10 +41,7 @@ function ItemUpgradeTip:OnEnable()
         private.currencyInfo[currencyId] = C_CurrencyInfo.GetCurrencyInfo(currencyId)
     end
 
-    self:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
-
-    -- TODO: Move to slash command
-    private.frame:Show()
+    self:RegisterEvent("CURRENCY_DISPLAY_UPDATE")    
 end
 
 -- Not super useful just now, but might be in the future
@@ -60,7 +69,17 @@ function ItemUpgradeTip:CURRENCY_DISPLAY_UPDATE(event, currencyType, quantity, q
     end
 end
 
-local SUBCOMMAND_FUNCS = {}
+local SUBCOMMAND_FUNCS = {
+    ["SETTINGS"] = function()
+        local settingsPanel = SettingsPanel
+
+        if settingsPanel:IsVisible() then
+            settingsPanel:Hide()
+        else
+            InterfaceOptionsFrame_OpenToCategory(private.Preferences.OptionsFrame)
+        end
+    end
+}
 
 ---@param input string
 function ItemUpgradeTip:ChatCommand(input)
@@ -73,13 +92,7 @@ function ItemUpgradeTip:ChatCommand(input)
             func(arguments or "")
         end
     else
-        local settingsPanel = SettingsPanel
-
-        if settingsPanel:IsVisible() then
-            settingsPanel:Hide()
-        else
-            InterfaceOptionsFrame_OpenToCategory(private.Preferences.OptionsFrame)
-        end
+        self:ToggleView()
     end
 end
 

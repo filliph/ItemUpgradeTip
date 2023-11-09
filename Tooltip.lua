@@ -28,26 +28,26 @@ function private.HandleCurrency(tooltip, currentUpgrade, maxUpgrade, bonusInfo)
 
     tooltip:AddLine("\n")
 
-    tooltip:AddLine("|cffa335ee" .. L["%s Upgrades"]:format(currencyInfo.name) .. "|r")
+    tooltip:AddLine("|cffa335ee" .. L["X_UPGRADES"]:format(currencyInfo.name) .. "|r")
     tooltip:AddTexture(currencyIconId)
 
     if currencyOwned >= bonusInfo.toMax and upgradesRemaining > 0 and not private.DB.profile.CompactTooltips then
-        tooltip:AddLine(L["Item can be upgraded to max level!"])
+        tooltip:AddLine(L["ITEM_CAN_BE_UPGRADED_TO_MAX"])
     end
 
     if upgradesRemaining == 0 then
         if not private.DB.profile.CompactTooltips then
-            tooltip:AddLine("|cffffffee" .. L["Item upgraded to max level!"] .. "|r")
+            tooltip:AddLine("|cffffffee" .. L["ITEM_UPGRADED_TO_MAX"] .. "|r")
         end
     else
-        tooltip:AddDoubleLine("|cffffffee" .. L["Cost for next level:"] .. "|r", "|cffffffee" .. bonusInfo.amount .. "|r")
-        tooltip:AddDoubleLine("|cffffffee" .. L["Cost to upgrade to max level:"] .. "|r", "|cffffffee" .. bonusInfo.toMax .. "|r")
+        tooltip:AddDoubleLine("|cffffffee" .. L["COST_FOR_NEXT_LEVEL"] .. "|r", "|cffffffee" .. bonusInfo.amount .. "|r")
+        tooltip:AddDoubleLine("|cffffffee" .. L["COST_TO_UPGRADE_TO_MAX"] .. "|r", "|cffffffee" .. bonusInfo.toMax .. "|r")
 
         if not private.DB.profile.CompactTooltips then
             if currencyOwned >= bonusInfo.toMax then
-                tooltip:AddDoubleLine("|cffffffee" .. L["Currency remaining after upgrading:"] .. "|r", "|cffffffee" .. (currencyOwned - bonusInfo.toMax) .. "|r")
+                tooltip:AddDoubleLine("|cffffffee" .. L["CURRENCY_REMAINING_AFTER_UPGRADING"] .. "|r", "|cffffffee" .. (currencyOwned - bonusInfo.toMax) .. "|r")
             else
-                tooltip:AddDoubleLine("|cffffffee" .. L["Currency needed for max level:"] .. "|r", "|cffffffee" .. (bonusInfo.toMax - currencyOwned) .. "|r")
+                tooltip:AddDoubleLine("|cffffffee" .. L["CURRENCY_NEEDED_FOR_MAX"] .. "|r", "|cffffffee" .. (bonusInfo.toMax - currencyOwned) .. "|r")
             end
         end
     end

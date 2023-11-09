@@ -30,6 +30,8 @@ locales\zhTW.lua
 Init.lua
 Debug.lua
 
+Manifest.xml
+
 upgradeHandlers\Heirloom.lua
 upgradeHandlers\Flightstones.lua
 upgradeHandlers\Anima.lua

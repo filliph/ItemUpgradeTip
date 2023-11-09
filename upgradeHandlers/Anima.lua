@@ -11,7 +11,7 @@ local L = LibStub("AceLocale-3.0"):GetLocale(AddOnFolderName)
 private.Preferences.DefaultValues.profile.DisabledIntegrations.Anima = false;
 private.Preferences.DisabledIntegrations.Anima = {
     type = "toggle",
-    name = L["Anima Upgrades"],
+    name = L["ANIMA_UPGRADES"],
     order = 120,
     width = "double",
 }

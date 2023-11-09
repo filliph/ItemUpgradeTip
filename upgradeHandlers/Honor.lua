@@ -15,7 +15,7 @@ private.currencyIndexes[private.currencyIds.Honor] = true
 private.Preferences.DefaultValues.profile.DisabledIntegrations.Honor = false;
 private.Preferences.DisabledIntegrations.Honor = {
     type = "toggle",
-    name = L["Honor Upgrades"],
+    name = L["HONOR_UPGRADES"],
     order = 130,
     width = "double",
 }
@@ -191,12 +191,12 @@ local function HandleHonor(tooltip, upgradeCost, bonusId, bonusInfo)
 
         if #nextLevelLines > 0 or #totalLines > 0 then
             tooltip:AddLine("\n")
-            tooltip:AddLine(ARTIFACT_GOLD_COLOR:WrapTextInColorCode(L["%s Upgrades"]:format(currencyInfo.name)))
+            tooltip:AddLine(ARTIFACT_GOLD_COLOR:WrapTextInColorCode(L["X_UPGRADES"]:format(currencyInfo.name)))
 
             if nextLevelLines then
                 if not private.DB.profile.CompactTooltips then
                     -- Standard tooltip
-                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["Cost for next level:"] .. " (" .. nextUpgrade.itemLevel .. ")"))
+                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["COST_FOR_NEXT_LEVEL"] .. " (" .. nextUpgrade.itemLevel .. ")"))
 
                     for _, newLine in pairs(nextLevelLines) do
                         tooltip:AddDoubleLine(newLine.left, newLine.right)
@@ -204,7 +204,7 @@ local function HandleHonor(tooltip, upgradeCost, bonusId, bonusInfo)
                 else
                     -- Compact tooltips
                     tooltip:AddDoubleLine(
-                        WHITE_FONT_COLOR:WrapTextInColorCode(L["Next Upgrade (%d):"]:format(nextUpgrade.itemLevel)),
+                        WHITE_FONT_COLOR:WrapTextInColorCode(L["NEXT_UPGRADE_X"]:format(nextUpgrade.itemLevel)),
                         nextLevelLines[1].right
                     )
                 end
@@ -217,7 +217,7 @@ local function HandleHonor(tooltip, upgradeCost, bonusId, bonusInfo)
                         tooltip:AddLine("\n")
                     end
 
-                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["Cost to upgrade to max level:"] .. " (" .. maxUpgrade.itemLevel .. ")"))
+                    tooltip:AddLine(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(L["COST_TO_UPGRADE_TO_MAX"] .. " (" .. maxUpgrade.itemLevel .. ")"))
 
                     for _, newLine in pairs(totalLines) do
                         tooltip:AddDoubleLine(newLine.left, newLine.right)
@@ -225,7 +225,7 @@ local function HandleHonor(tooltip, upgradeCost, bonusId, bonusInfo)
                 else
                     -- Compact tooltips
                     tooltip:AddDoubleLine(
-                        WHITE_FONT_COLOR:WrapTextInColorCode(L["Max Upgrade (%d):"]:format(maxUpgrade.itemLevel)),
+                        WHITE_FONT_COLOR:WrapTextInColorCode(L["MAX_UPGRADE_X"]:format(maxUpgrade.itemLevel)),
                         totalLines[1].right
                     )
                 end
