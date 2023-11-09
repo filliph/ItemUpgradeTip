@@ -12,6 +12,7 @@ local ItemUpgradeTip = LibStub("AceAddon-3.0"):NewAddon(AddOnFolderName, "AceCon
 
 -- Core initialisation
 function ItemUpgradeTip:OnInitialize()
+    private:InitializeFrame()
     local DB = private.Preferences:InitializeDatabase()
 
     private.DB = DB
@@ -29,6 +30,9 @@ function ItemUpgradeTip:OnEnable()
     end
 
     self:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
+
+    -- TODO: Move to slash command
+    private.frame:Show()
 end
 
 -- Not super useful just now, but might be in the future
