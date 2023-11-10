@@ -23,6 +23,18 @@ function ItemUpgradeTip:ToggleView()
     IUTView:SetShown(not IUTView:IsShown())
 end
 
+-- Return the Mythic+ info
+function ItemUpgradeTip:GetMythicPlusInfo()
+    local mythicPlusInfo = private.mythicPlusInfo
+
+    for index, mPlusKey in ipairs(private.mythicPlusInfo) do
+        -- Lookup cached currency info
+        mythicPlusInfo[index]["currencyInfo"] = private.currencyInfo[mPlusKey.currencyId]
+    end
+
+    return mythicPlusInfo
+end
+
 -- Core initialisation
 function ItemUpgradeTip:OnInitialize()
     local DB = private.Preferences:InitializeDatabase()

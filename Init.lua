@@ -6,24 +6,27 @@ local private = select(2, ...) ---@class PrivateNamespace
 
 local LibDD = LibStub:GetLibrary("LibUIDropDownMenu-4.0")
 
----@class private.currencyInfo : { [number]: CurrencyInfo }
+---@class private.currencyInfo : Array<CurrencyInfo>
 private.currencyInfo = {}
 
 ---@class private.currencyIds : { [string]: number }
 private.currencyIds = {}
 
----@class private.currencyIndexes : { [number]: boolean }
+---@class private.currencyIndexes : Array<boolean>
 private.currencyIndexes = {}
 
 ---@class private.upgradeHandlers : { [number]: fun(tooltip: GameTooltip, itemId: number, itemLink: string, currentUpgrade: number, maxUpgrade: number, bonusIds: table<number, number>): boolean }
 private.upgradeHandlers = {}
+
+---@class private.mythicPlusInfo : Array<MythicPlusInfo>
+private.mythicPlusInfo = {}
 
 ---@type Localizations
 local L = LibStub("AceLocale-3.0"):GetLocale(AddOnFolderName)
 
 -- Export constants into the global scope (for XML frames to use)
 for key, value in pairs(L) do
-    _G["IUT_L_" .. key] = value
+    _G["ITEMUPGRADETIP_L_" .. key] = value
 end
 
 -- ----------------------------------------------------------------------------

@@ -7,11 +7,11 @@
         -->
         <Size y="30" />
         <Scripts>
-            <OnLoad method="OnLoad"/>
+            <OnLoad method="OnLoad" />
         </Scripts>
         <Anchors>
-            <Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="TOPLEFT"/>
-            <Anchor point="RIGHT" relativeKey="$parent" relativePoint="RIGHT"/>
+            <Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="TOPLEFT" />
+            <Anchor point="RIGHT" relativeKey="$parent" relativePoint="RIGHT" />
         </Anchors>
         <Layers>
             <Layer level="ARTWORK">

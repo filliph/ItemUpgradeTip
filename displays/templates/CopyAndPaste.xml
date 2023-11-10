@@ -1,21 +1,13 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
     <Frame
-        name="AuctionatorConfigurationCopyAndPasteFrame"
-        mixin="AuctionatorConfigurationCopyAndPasteMixin"
-        inherits="AuctionatorConfigurationTooltip"
+        name="ItemUpgradeTipCopyAndPasteFrame"
+        mixin="ItemUpgradeTipCopyAndPasteMixin"
+        inherits="ItemUpgradeTipTooltip"
         virtual="true"
     >
-        <!--
-            <KeyValues>
-                <KeyValue key="labelText" value="" type="string"/>
-                <KeyValue key="copyText" value="" type="string" />
-                <KeyValue key="tooltipTitleText" value="" type="string"/>
-                <KeyValue key="tooltipText" value="" type="string"/>
-            </KeyValues>
-        -->
         <Size y="40" />
         <Scripts>
-            <OnLoad method="OnLoad"/>
+            <OnLoad method="OnLoad" />
         </Scripts>
         <Anchors>
             <Anchor point="LEFT" relativeKey="$parent" relativePoint="LEFT" />
@@ -40,7 +32,7 @@
             <Layer level="BACKGROUND">
                 <FontString inherits="GameFontHighlight" parentKey="Label">
                     <Anchors>
-                        <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeKey="$parent.InputBox" x="8" y="-4"/>
+                        <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeKey="$parent.InputBox" x="8" y="-4" />
                     </Anchors>
                 </FontString>
             </Layer>

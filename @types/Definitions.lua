@@ -53,3 +53,14 @@
 ---@field currencyId integer
 ---@field amount integer
 ---@field toMax integer
+
+
+-- ----------------------------------------------------------------------------
+-- Mythic+ Table Data
+-- ----------------------------------------------------------------------------
+---@class MythicPlusInfo
+---@field keyLevel integer|string
+---@field lootDrops integer
+---@field vaultReward integer
+---@field currencyId integer
+---@field currencyInfo CurrencyInfo?
