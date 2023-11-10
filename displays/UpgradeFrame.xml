@@ -10,7 +10,7 @@
         inherits="ButtonFrameTemplate"
         clampedToScreen="true"
     >
-        <Size x="600" y="530" />
+        <Size x="700" y="530" />
         <Scripts>
             <OnLoad method="OnLoad" />
             <OnShow method="OnShow" />
