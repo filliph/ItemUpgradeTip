@@ -30,8 +30,7 @@ local MYTHICPLUS_DATA_PROVIDER_LAYOUT = {
         headerText = ITEMUPGRADETIP_L_CREST_TYPE,
         headerParameters = { "crestReward" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
-        cellParameters = { "crestReward" },
-        width = 244
+        cellParameters = { "crestReward" }
     }
 }
 

@@ -15,7 +15,6 @@ local RAID_DATA_PROVIDER_LAYOUT = {
         headerParameters = { "lfrTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "lfrTier" },
-        width = 111,
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
@@ -23,7 +22,6 @@ local RAID_DATA_PROVIDER_LAYOUT = {
         headerParameters = { "normalTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "normalTier" },
-        width = 111,
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
@@ -31,7 +29,6 @@ local RAID_DATA_PROVIDER_LAYOUT = {
         headerParameters = { "heroicTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "heroicTier" },
-        width = 111
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
@@ -39,7 +36,6 @@ local RAID_DATA_PROVIDER_LAYOUT = {
         headerParameters = { "mythicTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "mythicTier" },
-        width = 111
     }
 }
 
