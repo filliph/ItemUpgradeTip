@@ -100,8 +100,7 @@ function ItemUpgradeTipDataProviderMixin:AppendEntries(entries)
     end
 end
 
--- We process a limited number of entries every frame to avoid freezing the
--- client.
+-- We process a limited number of entries every frame to avoid freezing the client.
 function ItemUpgradeTipDataProviderMixin:CheckForEntriesToProcess()
     if #self.entriesToProcess == 0 then
         if self.isDirty then

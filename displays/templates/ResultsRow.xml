@@ -21,7 +21,6 @@
                     </Anchors>
                 </Texture>
 
-                <!-- Using a normal texture for highlight to control the behavior. -->
                 <Texture parentKey="HighlightTexture" atlas="auctionhouse-ui-row-highlight" alphaMode="ADD" setAllPoints="true" hidden="true">
                     <Anchors>
                         <Anchor point="TOPLEFT" relativePoint="TOPLEFT" />
