@@ -32,28 +32,61 @@ private.Preferences.DisabledIntegrations.Flightstones = {
     width = "double",
 }
 
--- Add Mythic+ Info
 ---@class private.mythicPlusInfo : Array<MythicPlusInfo>
 private.mythicPlusInfo = {
-    [1] = {keyLevel = 2, lootDrops = 441, vaultReward = 454, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    [2] = {keyLevel = 3, lootDrops = 444, vaultReward = 457, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    [3] = {keyLevel = 4, lootDrops = 444, vaultReward = 460, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    [4] = {keyLevel = 5, lootDrops = 447, vaultReward = 460, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    [5] = {keyLevel = 6, lootDrops = 447, vaultReward = 463, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    [6] = {keyLevel = 7, lootDrops = 450, vaultReward = 463, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    [7] = {keyLevel = 8, lootDrops = 450, vaultReward = 467, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    [8] = {keyLevel = 9, lootDrops = 454, vaultReward = 467, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    [9] = {keyLevel = 10, lootDrops = 454, vaultReward = 470, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    [10] = {keyLevel = 11, lootDrops = 457, vaultReward = 470, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    [11] = {keyLevel = 12, lootDrops = 457, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    [12] = {keyLevel = 13, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    [13] = {keyLevel = 14, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    [14] = {keyLevel = 15, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    [15] = {keyLevel = 16, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    [16] = {keyLevel = 17, lootDrops = 467, vaultReward = 476, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    [17] = {keyLevel = 18, lootDrops = 467, vaultReward = 480, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    [18] = {keyLevel = 19, lootDrops = 470, vaultReward = 480, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    [19] = {keyLevel = "20+", lootDrops = 470, vaultReward = 483, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 2, lootDrops = 441, vaultReward = 454, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 3, lootDrops = 444, vaultReward = 457, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 4, lootDrops = 444, vaultReward = 460, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 5, lootDrops = 447, vaultReward = 460, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 6, lootDrops = 447, vaultReward = 463, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 7, lootDrops = 450, vaultReward = 463, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 8, lootDrops = 450, vaultReward = 467, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 9, lootDrops = 454, vaultReward = 467, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 10, lootDrops = 454, vaultReward = 470, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 11, lootDrops = 457, vaultReward = 470, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 12, lootDrops = 457, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 13, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 14, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 15, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 16, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 17, lootDrops = 467, vaultReward = 476, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 18, lootDrops = 467, vaultReward = 480, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 19, lootDrops = 470, vaultReward = 480, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = "20+", lootDrops = 470, vaultReward = 483, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
+}
+
+---@type Array<RaidInfo>
+private.raidInfo = {
+    {boss = 1,                      lfr = 441, normal = 454, heroic = 467, mythic = 480},
+    {boss = 2,                      lfr = 441, normal = 454, heroic = 467, mythic = 480},
+    {boss = 3,                      lfr = 444, normal = 457, heroic = 470, mythic = 483},
+    {boss = 4,                      lfr = 444, normal = 457, heroic = 470, mythic = 483},
+    {boss = L["X_RARE"]:format(3),  lfr = 450, normal = 463, heroic = 476, mythic = 489},
+    {boss = 5,                      lfr = 447, normal = 460, heroic = 473, mythic = 486},
+    {boss = 6,                      lfr = 447, normal = 460, heroic = 473, mythic = 486},
+    {boss = 7,                      lfr = 447, normal = 460, heroic = 473, mythic = 486},
+    {boss = 8,                      lfr = 450, normal = 463, heroic = 476, mythic = 489},
+    {boss = 9,                      lfr = 450, normal = 463, heroic = 476, mythic = 489},
+    {boss = L["X_RARE"]:format(9),  lfr = 457, normal = 470, heroic = 483, mythic = 496},
+}
+
+---@type RaidCurrencyInfo
+private.raidCurrencyInfo = {
+    -- LFR
+    lfrCurrencyId = private.currencyIds.whelpDreamingCrest,
+    lfrColor = UNCOMMON_GREEN_COLOR,
+
+    -- Normal
+    normalCurrencyId = private.currencyIds.drakeDreamingCrest,
+    normalColor = RARE_BLUE_COLOR,
+
+    -- Heroic
+    heroicCurrencyId = private.currencyIds.wyrmDreamingCrest,
+    heroicColor = EPIC_PURPLE_COLOR,
+
+    -- Mythic
+    mythicCurrencyId = private.currencyIds.aspectDreamingCrest,
+    mythicColor = LEGENDARY_ORANGE_COLOR,
 }
 
 ---@type Array<flightstoneBonusData>

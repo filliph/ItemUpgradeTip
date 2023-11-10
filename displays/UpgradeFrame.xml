@@ -38,6 +38,16 @@
                 </Anchors>
             </Frame>
 
+            <Frame inherits="ItemUpgradeTipRaidDisplayTemplate" parentArray="Views">
+                <KeyValues>
+                    <KeyValue key="displayMode" value="Raid" type="string" />
+                </KeyValues>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="TOPLEFT" x="20" y="-50" />
+                    <Anchor point="BOTTOMRIGHT" relativeKey="$parent" relativePoint="BOTTOMRIGHT" x="-20" y="50" />
+                </Anchors>
+            </Frame>
+
             <Frame inherits="ItemUpgradeTipInfoDisplayTemplate" parentArray="Views">
                 <KeyValues>
                     <KeyValue key="displayMode" value="Info" type="string" />
@@ -52,6 +62,12 @@
                 <KeyValues>
                     <KeyValue key="displayMode" value="MythicPlus" type="string" />
                     <KeyValue key="title" value="ITEMUPGRADETIP_L_MYTHICPLUS_TITLE" type="global" />
+                </KeyValues>
+            </Button>
+            <Button parentKey="RaidTab" inherits="ItemUpgradeTipTabButtonTemplate" name="ItemUpgradeTipRaidTab_Button" text="ITEMUPGRADETIP_L_RAID">
+                <KeyValues>
+                    <KeyValue key="displayMode" value="Raid" type="string" />
+                    <KeyValue key="title" value="ITEMUPGRADETIP_L_RAID_TITLE" type="global" />
                 </KeyValues>
             </Button>
             <Button parentKey="InfoTab" inherits="ItemUpgradeTipTabButtonTemplate" name="ItemUpgradeTipInfoTab_Button" text="ITEMUPGRADETIP_L_INFO">

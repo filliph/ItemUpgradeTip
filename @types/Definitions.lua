@@ -63,4 +63,30 @@
 ---@field lootDrops integer
 ---@field vaultReward integer
 ---@field currencyId integer
+---@field color ColorMixin
 ---@field currencyInfo CurrencyInfo?
+
+
+-- ----------------------------------------------------------------------------
+-- Raid Table Data
+-- ----------------------------------------------------------------------------
+---@class RaidInfo
+---@field boss integer|string
+---@field lfr integer
+---@field normal integer
+---@field heroic integer
+---@field mythic integer
+
+---@class RaidCurrencyInfo
+---@field lfrCurrencyId integer
+---@field lfrColor ColorMixin
+---@field lfrCurrencyInfo CurrencyInfo?
+---@field normalCurrencyId integer
+---@field normalColor ColorMixin
+---@field normalCurrencyInfo CurrencyInfo?
+---@field heroicCurrencyId integer
+---@field heroicColor ColorMixin
+---@field heroicCurrencyInfo CurrencyInfo?
+---@field mythicCurrencyId integer
+---@field mythicColor ColorMixin
+---@field mythicCurrencyInfo CurrencyInfo?

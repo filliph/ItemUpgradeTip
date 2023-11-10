@@ -16,6 +16,10 @@
     <Include file="UpgradeFrame.xml" />
 
     <Include file="tabs/info/Info.xml" />
+    
     <Include file="tabs/mythicPlus/MythicPlus.xml" />
     <Include file="tabs/mythicPlus/MythicPlusRow.xml" />
+    
+    <Include file="tabs/raid/Raid.xml" />
+    <Include file="tabs/raid/RaidRow.xml" />
 </Ui>

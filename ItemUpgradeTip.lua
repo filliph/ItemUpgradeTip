@@ -24,6 +24,7 @@ function ItemUpgradeTip:ToggleView()
 end
 
 -- Return the Mythic+ info
+---@return Array<MythicPlusInfo>
 function ItemUpgradeTip:GetMythicPlusInfo()
     local mythicPlusInfo = private.mythicPlusInfo
 
@@ -33,6 +34,25 @@ function ItemUpgradeTip:GetMythicPlusInfo()
     end
 
     return mythicPlusInfo
+end
+
+-- Return the Raid info
+---@return Array<RaidInfo>
+function ItemUpgradeTip:GetRaidInfo()
+    return private.raidInfo
+end
+
+-- Return the Raid currency info
+---@return RaidCurrencyInfo
+function ItemUpgradeTip:GetRaidCurrencyInfo()
+    local raidCurrencyInfo = private.raidCurrencyInfo
+
+    raidCurrencyInfo.lfrCurrencyInfo = private.currencyInfo[raidCurrencyInfo.lfrCurrencyId]
+    raidCurrencyInfo.normalCurrencyInfo = private.currencyInfo[raidCurrencyInfo.normalCurrencyId]
+    raidCurrencyInfo.heroicCurrencyInfo = private.currencyInfo[raidCurrencyInfo.heroicCurrencyId]
+    raidCurrencyInfo.mythicCurrencyInfo = private.currencyInfo[raidCurrencyInfo.mythicCurrencyId]
+
+    return raidCurrencyInfo
 end
 
 -- Core initialisation
