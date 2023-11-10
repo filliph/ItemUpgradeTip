@@ -58,7 +58,7 @@ function ItemUpgradeTipMythicPlusDataProviderMixin:Refresh()
 
         table.insert(results, keyRange)
     end
-    self:AppendEntries(results, true)
+    self:AppendEntries(results)
 end
 
 function ItemUpgradeTipMythicPlusDataProviderMixin:GetColumnHideStates()
