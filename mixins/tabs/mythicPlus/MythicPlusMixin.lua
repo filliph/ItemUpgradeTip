@@ -1,3 +1,5 @@
+---@diagnostic disable: duplicate-set-field
+
 local MYTHICPLUS_DATA_PROVIDER_LAYOUT = {
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",

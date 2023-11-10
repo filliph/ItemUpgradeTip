@@ -1,3 +1,5 @@
+---@diagnostic disable: duplicate-set-field
+
 ItemUpgradeTipDisplayDataProviderMixin = CreateFromMixins(ItemUpgradeTipDataProviderMixin)
 
 local itemLinkToLevel = {}
