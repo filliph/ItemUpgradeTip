@@ -68,6 +68,12 @@ function ItemUpgradeTip:GetupgradeTrackInfo()
     return upgradeTrackInfo
 end
 
+-- Return the Crafting info
+---@return Array<CraftingInfo>
+function ItemUpgradeTip:GetCraftingInfo()
+    return private.craftingInfo
+end
+
 -- Core initialisation
 function ItemUpgradeTip:OnInitialize()
     local DB = private.Preferences:InitializeDatabase()

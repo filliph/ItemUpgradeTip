@@ -217,6 +217,37 @@ private.upgradeTrackInfo = {
     },
 }
 
+---@type Array<CraftingInfo>
+private.craftingInfo = {
+    -- Whelpling
+    {itemLevel = 434, itemId = 206977, rank = 1},
+    {itemLevel = 437, itemId = 206977, rank = 2},
+    {itemLevel = 441, itemId = 206977, rank = 3},
+    {itemLevel = 444, itemId = 206977, rank = 4},
+    {itemLevel = 444, itemId = 206977, rank = 5},
+
+    -- Spark
+    {itemLevel = 450, itemId = 206959, rank = 1},
+    {itemLevel = 454, itemId = 206959, rank = 2},
+    {itemLevel = 457, itemId = 206959, rank = 3},
+    {itemLevel = 460, itemId = 206959, rank = 4},
+    {itemLevel = 463, itemId = 206959, rank = 5},
+
+    -- Wyrm
+    {itemLevel = 463, itemId = 206960, rank = 1},
+    {itemLevel = 467, itemId = 206960, rank = 2},
+    {itemLevel = 470, itemId = 206960, rank = 3},
+    {itemLevel = 473, itemId = 206960, rank = 4},
+    {itemLevel = 476, itemId = 206960, rank = 5},
+
+    -- Aspect
+    {itemLevel = 473, itemId = 206961, rank = 1},
+    {itemLevel = 476, itemId = 206961, rank = 2},
+    {itemLevel = 480, itemId = 206961, rank = 3},
+    {itemLevel = 483, itemId = 206961, rank = 4},
+    {itemLevel = 486, itemId = 206961, rank = 5},
+}
+
 ---@type Array<flightstoneBonusData>
 local flightstoneBonusIds = {
     -- Explorer

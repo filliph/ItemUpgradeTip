@@ -25,4 +25,7 @@
     
     <Include file="tabs/upgrade/Upgrade.xml" />
     <Include file="tabs/upgrade/UpgradeRow.xml" />
+    
+    <Include file="tabs/crafting/Crafting.xml" />
+    <Include file="tabs/crafting/CraftingRow.xml" />
 </Ui>

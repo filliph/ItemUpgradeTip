@@ -14,7 +14,7 @@ function ItemUpgradeTipStringCellTemplateMixin:Populate(rowData, index)
 end
 
 function ItemUpgradeTipStringCellTemplateMixin:ShowTooltip()
-    if not self.rowData[self.columnName .. "ItemLink"] and not self.rowData[self.columnName .. "CurrencyId"] then
+    if not self.rowData[self.columnName .. "ItemLink"] and not self.rowData[self.columnName .. "CurrencyId"] and not self.rowData[self.columnName .. "ItemId"] then
         return
     end
 
@@ -25,6 +25,8 @@ function ItemUpgradeTipStringCellTemplateMixin:ShowTooltip()
         GameTooltip:SetHyperlink(self.rowData[self.columnName .. "ItemLink"])
     elseif self.rowData[self.columnName .. "CurrencyId"] then
         GameTooltip:SetCurrencyByID(self.rowData[self.columnName .. "CurrencyId"])
+    elseif self.rowData[self.columnName .. "ItemId"] then
+        GameTooltip:SetItemByID(self.rowData[self.columnName .. "ItemId"])
     end
 
     GameTooltip:Show()

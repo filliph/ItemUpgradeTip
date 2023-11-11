@@ -2,7 +2,7 @@
 
 ItemUpgradeTipDisplayDataProviderMixin = CreateFromMixins(ItemUpgradeTipDataProviderMixin)
 
-local itemLinkToLevel = {}
+local itemCache = {}
 
 function ItemUpgradeTipDisplayDataProviderMixin:OnLoad()
     ItemUpgradeTipDataProviderMixin.OnLoad(self)
@@ -10,32 +10,45 @@ function ItemUpgradeTipDisplayDataProviderMixin:OnLoad()
     self.processCountPerUpdate = 200 --Reduce flickering when updating the display
     self.selectedIndexes = {}
 
-    local function ApplyItemLevel(entry, itemLevel)
-        entry.itemName = entry.itemName .. " (" .. itemLevel .. ")"
-        entry.itemNamePretty = self:ApplyQualityColor(entry.itemName, entry.itemLink)
+    local function ApplyItemInfo(entry, itemLink)
+        local icon = entry.itemIcon and CreateTextureMarkup(entry.itemIcon, 64, 64, 0, 0, 0.1, 0.9, 0.1, 0.9) or ""
+
+        entry.itemNamePretty = icon .. " " .. self:ApplyQualityColor(entry.itemName, itemLink)
     end
 
     -- Populate item level in any item names
     self:SetOnEntryProcessedCallback(function(entry)
-        if entry.itemLink == nil then
+        if entry.itemId == nil then
             self:NotifyCacheUsed()
             return
         end
 
         -- Use cached item level to reduce flickering and scroll jumping up and down
-        if itemLinkToLevel[entry.itemLink] then
-            ApplyItemLevel(entry, itemLinkToLevel[entry.itemLink])
+        if itemCache[entry.itemId] then
+            entry.itemName, _, _, _, _, _, _, _, _, entry.itemIcon = GetItemInfo(entry.itemId);
+            ApplyItemInfo(entry, itemCache[entry.itemId])
             self:NotifyCacheUsed()
             return
         end
 
-        local item = Item:CreateFromItemLink(entry.itemLink)
+        local item = Item:CreateFromItemID(entry.itemId)
         item:ContinueOnItemLoad(function()
-            local itemLevel = GetDetailedItemLevelInfo(entry.itemLink)
+            if (not item:GetItemID()) then
+                return
+            end
 
-            if itemLevel ~= nil then
-                itemLinkToLevel[entry.itemLink] = itemLevel
-                ApplyItemLevel(entry, itemLevel)
+            local itemIDr = GetItemInfoInstant(item:GetItemID())
+            if not itemIDr then
+                return
+            end
+
+            entry.itemName, _, _, _, _, _, _, _, _, entry.itemIcon = GetItemInfo(item:GetItemID());
+
+            local itemLink = item:GetItemLink()
+
+            if itemLink ~= nil then
+                itemCache[entry.itemId] = itemLink
+                ApplyItemInfo(entry, itemLink)
                 self:SetDirty()
             end
         end)

@@ -112,3 +112,13 @@
 ---@field rank integer
 ---@field upgradeLevel integer
 ---@field maxUpgradeLevel integer
+
+
+-- ----------------------------------------------------------------------------
+-- Crafting Data
+-- ----------------------------------------------------------------------------
+---@class CraftingInfo
+---@field itemLevel integer
+---@field itemId integer
+---@field rank integer
+---@field itemInfo table?

@@ -23,4 +23,7 @@
     
     <Script file="tabs/upgrade/UpgradeMixin.lua" />
     <Script file="tabs/upgrade/UpgradeRowMixin.lua" />
+    
+    <Script file="tabs/crafting/CraftingMixin.lua" />
+    <Script file="tabs/crafting/CraftingRowMixin.lua" />
 </Ui>
