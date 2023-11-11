@@ -52,7 +52,7 @@ function ItemUpgradeTipMythicPlusDataProviderMixin:Refresh()
             crestReward = icon .. " " .. mPlusKey.color:WrapTextInColorCode(mPlusKey.currencyInfo.name),
             index = index,
             selected = self:IsSelected(index),
-            currencyId = mPlusKey.currencyId
+            crestRewardCurrencyId = mPlusKey.currencyId
         }
 
         table.insert(results, keyRange)
