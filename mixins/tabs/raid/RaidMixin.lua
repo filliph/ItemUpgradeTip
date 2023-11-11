@@ -70,10 +70,10 @@ function ItemUpgradeTipRaidDataProviderMixin:Refresh()
 
     local raidCurrencyData = {
         boss = ITEMUPGRADETIP_L_CREST_TYPE,
-        lfrTier = lfrIcon .. " " .. raidCurrencyInfo.lfrColor:WrapTextInColorCode(ITEMUPGRADETIP_L_WHELP_CRESTS_SHORT),
-        normalTier = normalIcon .. " " .. raidCurrencyInfo.normalColor:WrapTextInColorCode(ITEMUPGRADETIP_L_DRAKE_CRESTS_SHORT),
-        heroicTier = heroicIcon .. " " .. raidCurrencyInfo.heroicColor:WrapTextInColorCode(ITEMUPGRADETIP_L_WYRM_CRESTS_SHORT),
-        mythicTier = mythicIcon .. " " .. raidCurrencyInfo.mythicColor:WrapTextInColorCode(ITEMUPGRADETIP_L_ASPECT_CRESTS_SHORT),
+        lfrTier = lfrIcon .. " " .. raidCurrencyInfo.lfrColor:WrapTextInColorCode(raidCurrencyInfo.lfrCurrencyName),
+        normalTier = normalIcon .. " " .. raidCurrencyInfo.normalColor:WrapTextInColorCode(raidCurrencyInfo.normalCurrencyName),
+        heroicTier = heroicIcon .. " " .. raidCurrencyInfo.heroicColor:WrapTextInColorCode(raidCurrencyInfo.heroicCurrencyName),
+        mythicTier = mythicIcon .. " " .. raidCurrencyInfo.mythicColor:WrapTextInColorCode(raidCurrencyInfo.mythicCurrencyName),
 
         lfrTierCurrencyId = raidCurrencyInfo.lfrCurrencyId,
         normalTierCurrencyId = raidCurrencyInfo.normalCurrencyId,

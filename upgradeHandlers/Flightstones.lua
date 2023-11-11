@@ -75,14 +75,17 @@ private.raidCurrencyInfo = {
     -- LFR
     lfrCurrencyId = private.currencyIds.whelpCrest,
     lfrColor = UNCOMMON_GREEN_COLOR,
+    lfrCurrencyName = L["WHELP_CRESTS_SHORT"],
 
     -- Normal
     normalCurrencyId = private.currencyIds.drakeCrest,
     normalColor = RARE_BLUE_COLOR,
+    normalCurrencyName = L["DRAKE_CRESTS_SHORT"],
 
     -- Heroic
     heroicCurrencyId = private.currencyIds.wyrmCrest,
     heroicColor = EPIC_PURPLE_COLOR,
+    heroicCurrencyName = L["WYRM_CRESTS_SHORT"],
 
     -- Mythic
     mythicCurrencyId = private.currencyIds.aspectCrest,
