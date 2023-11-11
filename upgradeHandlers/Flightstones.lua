@@ -90,6 +90,8 @@ private.raidCurrencyInfo = {
     -- Mythic
     mythicCurrencyId = private.currencyIds.aspectCrest,
     mythicColor = LEGENDARY_ORANGE_COLOR,
+    mythicCurrencyName = L["ASPECT_CRESTS_SHORT"],
+}
 }
 
 ---@type Array<flightstoneBonusData>
