@@ -11,17 +11,17 @@ local L = LibStub("AceLocale-3.0"):GetLocale(AddOnFolderName)
 private.currencyIds.Flightstones = 2245
 private.currencyIndexes[private.currencyIds.Flightstones] = true
 
-private.currencyIds.whelpDreamingCrest = 2706
-private.currencyIndexes[private.currencyIds.whelpDreamingCrest] = true
+private.currencyIds.whelpCrest = 2706
+private.currencyIndexes[private.currencyIds.whelpCrest] = true
 
-private.currencyIds.drakeDreamingCrest = 2707
-private.currencyIndexes[private.currencyIds.drakeDreamingCrest] = true
+private.currencyIds.drakeCrest = 2707
+private.currencyIndexes[private.currencyIds.drakeCrest] = true
 
-private.currencyIds.wyrmDreamingCrest = 2708
-private.currencyIndexes[private.currencyIds.wyrmDreamingCrest] = true
+private.currencyIds.wyrmCrest = 2708
+private.currencyIndexes[private.currencyIds.wyrmCrest] = true
 
-private.currencyIds.aspectDreamingCrest = 2709
-private.currencyIndexes[private.currencyIds.aspectDreamingCrest] = true
+private.currencyIds.aspectCrest = 2709
+private.currencyIndexes[private.currencyIds.aspectCrest] = true
 
 -- Add preferences
 private.Preferences.DefaultValues.profile.DisabledIntegrations.Flightstones = false;
@@ -34,25 +34,25 @@ private.Preferences.DisabledIntegrations.Flightstones = {
 
 ---@class private.mythicPlusInfo : Array<MythicPlusInfo>
 private.mythicPlusInfo = {
-    {keyLevel = 2, lootDrops = 441, vaultReward = 454, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    {keyLevel = 3, lootDrops = 444, vaultReward = 457, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    {keyLevel = 4, lootDrops = 444, vaultReward = 460, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    {keyLevel = 5, lootDrops = 447, vaultReward = 460, currencyId = private.currencyIds.whelpDreamingCrest, color = UNCOMMON_GREEN_COLOR},
-    {keyLevel = 6, lootDrops = 447, vaultReward = 463, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    {keyLevel = 7, lootDrops = 450, vaultReward = 463, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    {keyLevel = 8, lootDrops = 450, vaultReward = 467, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    {keyLevel = 9, lootDrops = 454, vaultReward = 467, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    {keyLevel = 10, lootDrops = 454, vaultReward = 470, currencyId = private.currencyIds.drakeDreamingCrest, color = RARE_BLUE_COLOR},
-    {keyLevel = 11, lootDrops = 457, vaultReward = 470, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    {keyLevel = 12, lootDrops = 457, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    {keyLevel = 13, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    {keyLevel = 14, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    {keyLevel = 15, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.wyrmDreamingCrest, color = EPIC_PURPLE_COLOR},
-    {keyLevel = 16, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    {keyLevel = 17, lootDrops = 467, vaultReward = 476, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    {keyLevel = 18, lootDrops = 467, vaultReward = 480, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    {keyLevel = 19, lootDrops = 470, vaultReward = 480, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
-    {keyLevel = "20+", lootDrops = 470, vaultReward = 483, currencyId = private.currencyIds.aspectDreamingCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 2, lootDrops = 441, vaultReward = 454, currencyId = private.currencyIds.whelpCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 3, lootDrops = 444, vaultReward = 457, currencyId = private.currencyIds.whelpCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 4, lootDrops = 444, vaultReward = 460, currencyId = private.currencyIds.whelpCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 5, lootDrops = 447, vaultReward = 460, currencyId = private.currencyIds.whelpCrest, color = UNCOMMON_GREEN_COLOR},
+    {keyLevel = 6, lootDrops = 447, vaultReward = 463, currencyId = private.currencyIds.drakeCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 7, lootDrops = 450, vaultReward = 463, currencyId = private.currencyIds.drakeCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 8, lootDrops = 450, vaultReward = 467, currencyId = private.currencyIds.drakeCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 9, lootDrops = 454, vaultReward = 467, currencyId = private.currencyIds.drakeCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 10, lootDrops = 454, vaultReward = 470, currencyId = private.currencyIds.drakeCrest, color = RARE_BLUE_COLOR},
+    {keyLevel = 11, lootDrops = 457, vaultReward = 470, currencyId = private.currencyIds.wyrmCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 12, lootDrops = 457, vaultReward = 473, currencyId = private.currencyIds.wyrmCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 13, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 14, lootDrops = 460, vaultReward = 473, currencyId = private.currencyIds.wyrmCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 15, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.wyrmCrest, color = EPIC_PURPLE_COLOR},
+    {keyLevel = 16, lootDrops = 463, vaultReward = 476, currencyId = private.currencyIds.aspectCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 17, lootDrops = 467, vaultReward = 476, currencyId = private.currencyIds.aspectCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 18, lootDrops = 467, vaultReward = 480, currencyId = private.currencyIds.aspectCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = 19, lootDrops = 470, vaultReward = 480, currencyId = private.currencyIds.aspectCrest, color = LEGENDARY_ORANGE_COLOR},
+    {keyLevel = "20+", lootDrops = 470, vaultReward = 483, currencyId = private.currencyIds.aspectCrest, color = LEGENDARY_ORANGE_COLOR},
 }
 
 ---@type Array<RaidInfo>
@@ -73,19 +73,19 @@ private.raidInfo = {
 ---@type RaidCurrencyInfo
 private.raidCurrencyInfo = {
     -- LFR
-    lfrCurrencyId = private.currencyIds.whelpDreamingCrest,
+    lfrCurrencyId = private.currencyIds.whelpCrest,
     lfrColor = UNCOMMON_GREEN_COLOR,
 
     -- Normal
-    normalCurrencyId = private.currencyIds.drakeDreamingCrest,
+    normalCurrencyId = private.currencyIds.drakeCrest,
     normalColor = RARE_BLUE_COLOR,
 
     -- Heroic
-    heroicCurrencyId = private.currencyIds.wyrmDreamingCrest,
+    heroicCurrencyId = private.currencyIds.wyrmCrest,
     heroicColor = EPIC_PURPLE_COLOR,
 
     -- Mythic
-    mythicCurrencyId = private.currencyIds.aspectDreamingCrest,
+    mythicCurrencyId = private.currencyIds.aspectCrest,
     mythicColor = LEGENDARY_ORANGE_COLOR,
 }
 
@@ -281,7 +281,7 @@ local flightstoneUpgradeData = {
         color = UNCOMMON_GREEN_COLOR,
         icon = 5309872,
         itemId = nil,
-        currencyId = private.currencyIds.whelpDreamingCrest
+        currencyId = private.currencyIds.whelpCrest
     },
 
     {
@@ -290,7 +290,7 @@ local flightstoneUpgradeData = {
         color = RARE_BLUE_COLOR,
         icon = 5309870,
         itemId = nil,
-        currencyId = private.currencyIds.drakeDreamingCrest
+        currencyId = private.currencyIds.drakeCrest
     },
 
     {
@@ -299,7 +299,7 @@ local flightstoneUpgradeData = {
         color = EPIC_PURPLE_COLOR,
         icon = 5309874,
         itemId = nil,
-        currencyId = private.currencyIds.wyrmDreamingCrest
+        currencyId = private.currencyIds.wyrmCrest
     },
 
     {
@@ -308,7 +308,7 @@ local flightstoneUpgradeData = {
         color = LEGENDARY_ORANGE_COLOR,
         icon = 5309868,
         itemId = nil,
-        currencyId = private.currencyIds.aspectDreamingCrest
+        currencyId = private.currencyIds.aspectCrest
     },
 }
 
