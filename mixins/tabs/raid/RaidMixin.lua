@@ -3,7 +3,7 @@
 local RAID_DATA_PROVIDER_LAYOUT = {
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_BOSS,
+        headerText = _G["ITEMUPGRADETIP_L_BOSS"],
         headerParameters = { "boss" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "boss" },
@@ -11,28 +11,28 @@ local RAID_DATA_PROVIDER_LAYOUT = {
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_LFR,
+        headerText = _G["ITEMUPGRADETIP_L_LFR"],
         headerParameters = { "lfrTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "lfrTier" },
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_NORMAL,
+        headerText = _G["ITEMUPGRADETIP_L_NORMAL"],
         headerParameters = { "normalTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "normalTier" },
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_HEROIC,
+        headerText = _G["ITEMUPGRADETIP_L_HEROIC"],
         headerParameters = { "heroicTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "heroicTier" },
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_MYTHIC,
+        headerText = _G["ITEMUPGRADETIP_L_MYTHIC"],
         headerParameters = { "mythicTier" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "mythicTier" },
@@ -69,7 +69,7 @@ function ItemUpgradeTipRaidDataProviderMixin:Refresh()
     local mythicIcon = raidCurrencyInfo.mythicCurrencyInfo.iconFileID and CreateTextureMarkup(raidCurrencyInfo.mythicCurrencyInfo.iconFileID, 64, 64, 0, 0, 0.1, 0.9, 0.1, 0.9) or ""
 
     local raidCurrencyData = {
-        boss = ITEMUPGRADETIP_L_CREST_TYPE,
+        boss = _G["ITEMUPGRADETIP_L_CREST_TYPE"],
         lfrTier = lfrIcon .. " " .. raidCurrencyInfo.lfrColor:WrapTextInColorCode(raidCurrencyInfo.lfrCurrencyName),
         normalTier = normalIcon .. " " .. raidCurrencyInfo.normalColor:WrapTextInColorCode(raidCurrencyInfo.normalCurrencyName),
         heroicTier = heroicIcon .. " " .. raidCurrencyInfo.heroicColor:WrapTextInColorCode(raidCurrencyInfo.heroicCurrencyName),

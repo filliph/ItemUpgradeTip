@@ -1,3 +1,4 @@
+---@diagnostic disable: duplicate-set-field
 ItemUpgradeTipTableResultsRowMixin = CreateFromMixins(ItemUpgradeTipResultsRowTemplateMixin)
 
 function ItemUpgradeTipTableResultsRowMixin:Populate(rowData, ...)

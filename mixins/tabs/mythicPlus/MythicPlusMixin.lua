@@ -3,7 +3,7 @@
 local MYTHICPLUS_DATA_PROVIDER_LAYOUT = {
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_KEY_LEVEL,
+        headerText = _G["ITEMUPGRADETIP_L_KEY_LEVEL"],
         headerParameters = { "keyLevel" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "keyLevel" },
@@ -11,7 +11,7 @@ local MYTHICPLUS_DATA_PROVIDER_LAYOUT = {
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_LOOT_DROPS,
+        headerText = _G["ITEMUPGRADETIP_L_LOOT_DROPS"],
         headerParameters = { "lootDrops" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "lootDrops" },
@@ -19,7 +19,7 @@ local MYTHICPLUS_DATA_PROVIDER_LAYOUT = {
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_VAULT_REWARD,
+        headerText = _G["ITEMUPGRADETIP_L_VAULT_REWARD"],
         headerParameters = { "vaultReward" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "vaultReward" },
@@ -27,7 +27,7 @@ local MYTHICPLUS_DATA_PROVIDER_LAYOUT = {
     },
     {
         headerTemplate = "ItemUpgradeTipStringColumnHeaderTemplate",
-        headerText = ITEMUPGRADETIP_L_CREST_TYPE,
+        headerText = _G["ITEMUPGRADETIP_L_CREST_TYPE"],
         headerParameters = { "crestReward" },
         cellTemplate = "ItemUpgradeTipStringCellTemplate",
         cellParameters = { "crestReward" }
