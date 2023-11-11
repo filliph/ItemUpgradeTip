@@ -22,4 +22,7 @@
     
     <Include file="tabs/raid/Raid.xml" />
     <Include file="tabs/raid/RaidRow.xml" />
+    
+    <Include file="tabs/upgrade/Upgrade.xml" />
+    <Include file="tabs/upgrade/UpgradeRow.xml" />
 </Ui>

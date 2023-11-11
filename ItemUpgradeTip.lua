@@ -55,6 +55,19 @@ function ItemUpgradeTip:GetRaidCurrencyInfo()
     return raidCurrencyInfo
 end
 
+-- Return the Upgrade info
+---@return Array<UpgradeTrackInfo>
+function ItemUpgradeTip:GetupgradeTrackInfo()
+    local upgradeTrackInfo = private.upgradeTrackInfo
+
+    for index, upgradeTrack in ipairs(private.upgradeTrackInfo) do
+        -- Lookup cached currency info
+        upgradeTrackInfo[index]["currencyInfo"] = private.currencyInfo[upgradeTrack.currencyId]
+    end
+
+    return upgradeTrackInfo
+end
+
 -- Core initialisation
 function ItemUpgradeTip:OnInitialize()
     local DB = private.Preferences:InitializeDatabase()

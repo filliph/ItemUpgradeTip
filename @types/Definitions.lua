@@ -89,9 +89,22 @@
 ---@field heroicCurrencyId integer
 ---@field heroicColor ColorMixin
 ---@field heroicCurrencyName string
----@field heroicColor ColorMixin
 ---@field heroicCurrencyInfo CurrencyInfo?
 ---@field mythicCurrencyId integer
 ---@field mythicColor ColorMixin
 ---@field mythicCurrencyName string
 ---@field mythicCurrencyInfo CurrencyInfo?
+
+
+-- ----------------------------------------------------------------------------
+-- Upgrade Table Data
+-- ----------------------------------------------------------------------------
+---@class UpgradeTrackInfo
+---@field itemLevel integer
+---@field rank integer
+---@field upgradeLevel integer
+---@field maxUpgradeLevel integer
+---@field currencyId integer
+---@field currencyName string
+---@field color ColorMixin
+---@field currencyInfo CurrencyInfo?

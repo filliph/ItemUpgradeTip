@@ -48,6 +48,16 @@
                 </Anchors>
             </Frame>
 
+            <Frame inherits="ItemUpgradeTipUpgradeDisplayTemplate" parentArray="Views">
+                <KeyValues>
+                    <KeyValue key="displayMode" value="Upgrade" type="string" />
+                </KeyValues>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="TOPLEFT" x="20" y="-50" />
+                    <Anchor point="BOTTOMRIGHT" relativeKey="$parent" relativePoint="BOTTOMRIGHT" x="-20" y="50" />
+                </Anchors>
+            </Frame>
+
             <Frame inherits="ItemUpgradeTipInfoDisplayTemplate" parentArray="Views">
                 <KeyValues>
                     <KeyValue key="displayMode" value="Info" type="string" />
@@ -68,6 +78,12 @@
                 <KeyValues>
                     <KeyValue key="displayMode" value="Raid" type="string" />
                     <KeyValue key="title" value="ITEMUPGRADETIP_L_RAID_TITLE" type="global" />
+                </KeyValues>
+            </Button>
+            <Button parentKey="UpgradeTab" inherits="ItemUpgradeTipTabButtonTemplate" name="ItemUpgradeTipUpgradeTab_Button" text="ITEMUPGRADETIP_L_UPGRADE_TRACKS">
+                <KeyValues>
+                    <KeyValue key="displayMode" value="Upgrade" type="string" />
+                    <KeyValue key="title" value="ITEMUPGRADETIP_L_UPGRADE_TRACKS_TITLE" type="global" />
                 </KeyValues>
             </Button>
             <Button parentKey="InfoTab" inherits="ItemUpgradeTipTabButtonTemplate" name="ItemUpgradeTipInfoTab_Button" text="ITEMUPGRADETIP_L_INFO">

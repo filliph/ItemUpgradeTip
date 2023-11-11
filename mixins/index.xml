@@ -20,4 +20,7 @@
     
     <Script file="tabs/raid/RaidMixin.lua" />
     <Script file="tabs/raid/RaidRowMixin.lua" />
+    
+    <Script file="tabs/upgrade/UpgradeMixin.lua" />
+    <Script file="tabs/upgrade/UpgradeRowMixin.lua" />
 </Ui>
