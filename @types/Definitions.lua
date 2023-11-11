@@ -101,10 +101,14 @@
 -- ----------------------------------------------------------------------------
 ---@class UpgradeTrackInfo
 ---@field itemLevel integer
----@field rank integer
----@field upgradeLevel integer
----@field maxUpgradeLevel integer
+---@field upgrade1 UpgradeTrackUpgrade
+---@field upgrade2 UpgradeTrackUpgrade?
 ---@field currencyId integer
 ---@field currencyName string
 ---@field color ColorMixin
 ---@field currencyInfo CurrencyInfo?
+
+---@class UpgradeTrackUpgrade
+---@field rank integer
+---@field upgradeLevel integer
+---@field maxUpgradeLevel integer

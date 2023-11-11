@@ -59,13 +59,24 @@ function ItemUpgradeTipUpgradeDataProviderMixin:Refresh()
     for index, upgradeTrack in ipairs(ItemUpgradeTip:GetupgradeTrackInfo()) do
         local icon = upgradeTrack.currencyInfo.iconFileID and CreateTextureMarkup(upgradeTrack.currencyInfo.iconFileID, 64, 64, 0, 0, 0.1, 0.9, 0.1, 0.9) or ""
 
+        local rank1 = upgradeTrack.upgrade1.rank
+        local rank2 = nil
+
+        local upgradeTierString1 = UPGRADE_TIER_FORMAT_STRING:format(upgradeTrack.upgrade1.upgradeLevel, upgradeTrack.upgrade1.maxUpgradeLevel)
+        local upgradeTierString2 = nil
+
+        if upgradeTrack.upgrade2 ~= nil then
+            rank2 = upgradeTrack.upgrade2.rank
+            upgradeTierString2 = UPGRADE_TIER_FORMAT_STRING:format(upgradeTrack.upgrade2.upgradeLevel, upgradeTrack.upgrade2.maxUpgradeLevel)
+        end
+
         local upgradeInfo = {
             ilvl = upgradeTrack.itemLevel,
             crestType = icon .. " " .. upgradeTrack.color:WrapTextInColorCode(upgradeTrack.currencyInfo.name),
-            veteranTier = upgradeTrack.rank == 3 and UPGRADE_TIER_FORMAT_STRING:format(upgradeTrack.upgradeLevel, upgradeTrack.maxUpgradeLevel) or "",
-            championTier = upgradeTrack.rank == 4 and UPGRADE_TIER_FORMAT_STRING:format(upgradeTrack.upgradeLevel, upgradeTrack.maxUpgradeLevel) or "",
-            heroTier = upgradeTrack.rank == 5 and UPGRADE_TIER_FORMAT_STRING:format(upgradeTrack.upgradeLevel, upgradeTrack.maxUpgradeLevel) or "",
-            mythTier = upgradeTrack.rank == 6 and UPGRADE_TIER_FORMAT_STRING:format(upgradeTrack.upgradeLevel, upgradeTrack.maxUpgradeLevel) or "",
+            veteranTier = (rank1 == 3 and upgradeTierString1) or (rank2 == 3 and upgradeTierString2) or "",
+            championTier = (rank1 == 4 and upgradeTierString1) or (rank2 == 4 and upgradeTierString2) or "",
+            heroTier = (rank1 == 5 and upgradeTierString1) or (rank2 == 5 and upgradeTierString2) or "",
+            mythTier = (rank1 == 6 and upgradeTierString1) or (rank2 == 6 and upgradeTierString2) or "",
             index = index,
             selected = self:IsSelected(index),
             crestTypeCurrencyId = upgradeTrack.currencyId
