@@ -80,13 +80,18 @@
 ---@class RaidCurrencyInfo
 ---@field lfrCurrencyId integer
 ---@field lfrColor ColorMixin
+---@field lfrCurrencyName string
 ---@field lfrCurrencyInfo CurrencyInfo?
 ---@field normalCurrencyId integer
 ---@field normalColor ColorMixin
+---@field normalCurrencyName string
 ---@field normalCurrencyInfo CurrencyInfo?
 ---@field heroicCurrencyId integer
+---@field heroicColor ColorMixin
+---@field heroicCurrencyName string
 ---@field heroicColor ColorMixin
 ---@field heroicCurrencyInfo CurrencyInfo?
 ---@field mythicCurrencyId integer
 ---@field mythicColor ColorMixin
+---@field mythicCurrencyName string
 ---@field mythicCurrencyInfo CurrencyInfo?
